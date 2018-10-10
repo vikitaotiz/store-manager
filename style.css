@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    height: 100vh;
+    grid-gap: 3px;
+}
+
+#header, #content, #footer {
+    padding: 1%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+}
+
+#header {
+    background: teal;
+}
+
+#content {
+    background: #dcdcdc;
+}
+
+#footer {
+    background: #696969;
+    color: #fff
+}
+
+.nav {
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.search {
+    width: 300px;
+}
+.search input {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 2%;
+    height: 30%;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+:any-link {
+    color: #fff;
+}
+
+#form {
+    width: 30%;
+    margin: auto;
+    padding: 3%;
+}
+
+form {
+    border: 1px solid teal;
+    border-radius: 3px;
+    padding: 3%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+}
+
+form :any-link{
+    text-decoration: none;
+}
+
+form input {
+    width: 94%;
+    margin: 2%;
+    padding: 1%;
+    border: none;
+    border-radius: 3px;
+}
+
+h4, h5 {
+    text-align: center;
+    color: teal;
+    border-bottom: 1px solid;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+    grid-gap: 1%;
+    height: 100%;
+}
+
+.menu {
+    background: teal;
+    color: #fff;
+}
+
+.menu .list {
+    border: 1px solid #dcdcdc;
+    padding: 3%;
+    text-align: center;
+}
+
+.menu .list:hover {
+    cursor: pointer;
+    background: #dcdcdc;
+    color: #0000;
+}
+
+.prod, .cart {
+    padding: 2%;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.prod {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.prod1, .prod2, .prod3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.product {
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+}
+
+
+.copy {
+    text-align: center;
+}
+
+/* Product Images*/
+
+img {
+    width: 190px;
+    height: 100px;
+}
+
+.details {
+    padding: 3%;
+}
+
+table, td {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.log, .reg {
+    background: teal;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 3px;
+}
+
+.btn-prod {
+    border: none;
+    background: teal;
+    color: #ffff;
+    padding: 5px;
+    margin: auto;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.del {
+    background: #B4222D;
+}
