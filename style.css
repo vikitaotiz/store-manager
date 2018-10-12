@@ -1,150 +1,125 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  background: #eee;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100vh;
+  grid-gap: 3px;
 }
 
-#container {
+.left {
+    background: #fff;
+}
+
+header {
+    grid-column: 1/13;
+    grid-row: 1/2;
     display: grid;
-    grid-template-rows: 1fr 10fr 1fr;
-    height: 100vh;
-    grid-gap: 3px;
-}
-
-#header, #content, #footer {
-    padding: 1%;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
-}
-
-#header {
+    grid-template-columns: 2fr 3fr 2fr;
     background: teal;
+    padding-top: 1%;
+    padding-left: 2%;
 }
 
-#content {
-    background: #dcdcdc;
-}
-
-#footer {
-    background: #696969;
-    color: #fff
-}
-
-.nav {
-    display: inline-block;
-    margin-right: 5%;
-}
-
-.search {
-    width: 300px;
-}
-.search input {
-    width: 100%;
-    border: none;
-    border-radius: 3px;
-    padding: 2%;
-    height: 30%;
-}
-
-.nav a {
-    text-decoration: none;
-}
-
-:any-link {
+.title {
     color: #fff;
 }
 
-#form {
-    width: 30%;
-    margin: auto;
-    padding: 3%;
+.search input {
+    margin-top: 4%;
+    width: 80%;
+    padding: 2%;
+    border: none;
+    border-radius: 3px;
+}
+
+.links {
+    padding-top: 2%;
+    color: #fff;
+}
+.links ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+.links a:link{
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    grid-column: 1/13;
+    grid-row: 2/12;
+}
+
+.container {
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-gap: 5px;
+    height: 90%;
+}
+
+.left,.middle,.right {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    padding: 2%;
+    border-radius: 3px;
 }
 
 form {
     border: 1px solid teal;
+    padding: 1%;
+    width: 45%;
     border-radius: 3px;
-    padding: 3%;
+    margin:3% auto;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    text-align: center;
 }
-
-form :any-link{
-    text-decoration: none;
+h3 {
+    color: teal;
+    text-align: center;
+    border-bottom: 1px solid teal;
 }
 
 form input {
-    width: 94%;
+    width: 92%;
     margin: 2%;
-    padding: 1%;
+    padding: 2%;
     border: none;
     border-radius: 3px;
 }
 
-h4, h5 {
+footer {
+    grid-column: 1/13;
+    background: #696969;
     text-align: center;
-    color: teal;
-    border-bottom: 1px solid;
-}
-
-.cont {
-    display: grid;
-    grid-template-columns: 1fr 5fr 4fr;
-    grid-gap: 1%;
-    height: 100%;
-}
-
-.menu {
-    background: teal;
     color: #fff;
 }
 
-.menu .list {
-    border: 1px solid #dcdcdc;
-    padding: 3%;
-    text-align: center;
+.middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3px;
+    padding: 1%;
 }
 
-.menu .list:hover {
-    cursor: pointer;
-    background: #dcdcdc;
-    color: #0000;
-}
-
-.prod, .cart {
-    padding: 2%;
+.prod {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
     background: #fff;
     border-radius: 3px;
 }
 
-.prod {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
-}
-
-.prod1, .prod2, .prod3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
-}
-
-.product {
-    border-radius: 3px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
-}
-
-
-.copy {
-    text-align: center;
-}
-
-/* Product Images*/
-
 img {
-    width: 190px;
-    height: 100px;
+    width: 150px;
+    height: 120px;
 }
 
 .details {
-    padding: 3%;
+    padding: 2%;
+    text-align: center;
 }
 
 table, td {    
@@ -157,23 +132,42 @@ table {
     width: 100%;
 }
 
-.log, .reg {
-    background: teal;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 3px;
+h5 {
+    color: teal;
+    text-align: center;
+    border-bottom: 1px solid;
 }
 
-.btn-prod {
-    border: none;
+.list {
+    border: 1px solid teal;
+    padding: 2%;
+    text-align: center;
+    margin-bottom: 2%;
     background: teal;
-    color: #ffff;
-    padding: 5px;
-    margin: auto;
+    color: #fff;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.del {
-    background: #B4222D;
+.list:hover {
+    background: #eee;
+    color: teal;
+}
+
+.btn-prod {
+    border: none;
+    border-radius: 3px;
+    padding: 2%;
+    background: teal;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-prodel {
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 2%;
+    background: #C63D44;
+    color: #fff;
 }
