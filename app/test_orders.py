@@ -38,6 +38,6 @@ class TestOrders(unittest.TestCase):
         res = self.tests.post('/orders', data = order_data, content_type="application/json")
         self.assertEqual(res.status_code, 200)
 
-    def test_get_order(self, id):
+    def test_get_order(self):
         result = self.tests.get("/order/1", content_type="application/json")
         self.assertEqual(result.status_code, 200)

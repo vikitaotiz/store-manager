@@ -35,9 +35,9 @@ class TestProducts(unittest.TestCase):
             "price" : 600
         })
 
-        res = self.tests.post('/products', data=order_data, content_type="application/json")
+        res = self.tests.post('/products', data = order_data, content_type="application/json")
         self.assertEqual(res.status_code, 200)
-
+        
     def test_get_product(self):
-        result = self.tests.get("/products/1", content_type="application/json")
+        result = self.tests.get("/product/1", content_type="application/json")
         self.assertEqual(result.status_code, 200)
