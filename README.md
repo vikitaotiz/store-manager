@@ -27,12 +27,12 @@ Endpoints are
 
 Get /products 
 
-Get /product
+Get /product/1
 
 Post /products
 
 Get /orders
 
-Get /order
+Get /order/1
 
 Post /orders
