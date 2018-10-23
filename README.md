@@ -24,7 +24,11 @@ $ pip install -r requirements.txt
 $ python orders.py
 
 Endpoints are
+
 Get /products
+
 Post /products
+
 Get /orders
+
 Post /orders
