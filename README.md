@@ -22,3 +22,9 @@ $ git checkout Develop to switch from master to this branch
 $ pip install -r requirements.txt
 
 $ python orders.py
+
+Endpoints are
+Get /products
+Post /products
+Get /orders
+Post /orders
