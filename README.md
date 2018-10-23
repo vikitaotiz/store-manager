@@ -26,14 +26,14 @@ $ python orders.py
 
 Endpoints are
 
-Get /products 
+Get | /products 
 
-Get /product/1
+Get | /product/1
 
-Post /products
+Post | /products
 
-Get /orders
+Get | /orders
 
-Get /order/1
+Get | /order/1
 
 Post /orders
