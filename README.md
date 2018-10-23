@@ -13,7 +13,7 @@ $ virtualenv -p python3 env
 
 $ source env/bin/activate
 
-Clone this repository: $ https://github.com/vikitaotiz/store-manager.git
+Clone this repository: $ https://github.com/vikitaotiz/store-manager/tree/Develop
 
 navigate into the repository after cloning
 
