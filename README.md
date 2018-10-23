@@ -13,11 +13,11 @@ $ virtualenv -p python3 env
 
 $ source env/bin/activate
 
-Clone this repository: $ https://github.com/vikitaotiz/store-manager/tree/Develop
+Clone this repository: $ https://github.com/vikitaotiz/store-manager.git
 
 navigate into the repository after cloning
 
-$ git checkout ft-attendant-add-sale-record-161356221 to switch from master to this branch
+$ git checkout Develop to switch from master to this branch
 
 $ pip install -r requirements.txt
 
