@@ -25,16 +25,17 @@ $ pip install -r requirements.txt
 $ python orders.py
 
 Endpoints are
-
+ | Method         |
+ ------------------
  | Get /products  | 
- ------------------
+ 
  | Get /product/1 |
- ------------------
+ 
  | Post /products |
- ------------------
+ 
  | Get /orders    |
- ------------------
+ 
  | Get /order/1   |
- ------------------
+ 
  | Post /orders   |
- ------------------
+ 
