@@ -26,9 +26,9 @@ $ python orders.py
 
 Endpoints are
 
- | Method         |
- |----------------|
- | Get /products  | 
+ | Method         | Endpoint       | Description       |
+ |----------------|----------------|-------------------|
+ | Get            | /products      | Gets all products |
  | Get /product/1 |
  | Post /products |
  | Get /orders    |
