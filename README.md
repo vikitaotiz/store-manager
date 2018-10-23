@@ -1,5 +1,6 @@
 # store-manager
 [![Build Status](https://travis-ci.org/vikitaotiz/store-manager.svg?branch=master)](https://travis-ci.org/vikitaotiz/store-manager)
+[![Coverage Status](https://coveralls.io/repos/github/vikitaotiz/store-manager/badge.svg?branch=master)](https://coveralls.io/github/vikitaotiz/store-manager?branch=master)
 
 Store Manager is a web application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.
 
