@@ -28,9 +28,9 @@ $ python orders.py
 
  | Method         | Endpoint       | Description            |
  |----------------|----------------|------------------------|
- | Get            | /products      | Gets all products      |
- | Get            | /product/1     | Get single a product   |
- | Post           | /products      | Adds a product         |
- | Get            | /orders        | Gets all sales orders  |
- | Get            | /order/1       | Gets single sale order |
- | Post           | /orders        | Adds a sale order      |
+ | Get            | api/v1/products      | Gets all products      |
+ | Get            | api/v1/product/1     | Get single a product   |
+ | Post           | api/v1/products      | Adds a product         |
+ | Get            | api/v1/orders        | Gets all sales orders  |
+ | Get            | api/v1/order/1       | Gets single sale order |
+ | Post           | api/v1/orders        | Adds a sale order      |
