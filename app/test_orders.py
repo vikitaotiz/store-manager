@@ -1,6 +1,7 @@
 import unittest
 import json
 import jwt
+from flask_restplus import Api, Resource
 
 from instance.config import app_config
 from app.api.v1.views.orders import Orders
