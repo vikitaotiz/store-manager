@@ -1,9 +1,9 @@
 import unittest
 import json
-import jwt
+# import jwt
 
-from instance.config import app_config
-from app.api.v1.views.products import Products
+# from instance.config import app_config
+from app.api.v1.views.products import Products, Product
 from app import app
 
 class TestProducts(unittest.TestCase):
@@ -18,13 +18,13 @@ class TestProducts(unittest.TestCase):
         "price" : 600
         })
 
-        self.create_product = self.tests.post('/products', data = product_info, content_type="application/json")
+        self.create_product = self.tests.post('/api/v1/products', data = product_info, content_type="application/json")
    
     def tearDown(self):
         self.tests = None
 
     def test_get_products(self):
-        result = self.tests.get("/products", content_type="application/json")
+        result = self.tests.get("/api/v1/products", content_type="application/json")
         self.assertEqual(result.status_code, 200)
 
     def test_post_products(self):
@@ -35,9 +35,9 @@ class TestProducts(unittest.TestCase):
             "price" : 600
         })
 
-        res = self.tests.post('/products', data = order_data, content_type="application/json")
+        res = self.tests.post('/api/v1/products', data = order_data, content_type="application/json")
         self.assertEqual(res.status_code, 200)
         
     def test_get_product(self):
-        result = self.tests.get("/product/1", content_type="application/json")
+        result = self.tests.get("/api/v1/product/1", content_type="application/json")
         self.assertEqual(result.status_code, 200)

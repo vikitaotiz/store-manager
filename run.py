@@ -1,5 +1,6 @@
 from app import app
-from instance.config import app_config
+
+app.config['SECRET_KEY'] = 'mysecret@12345'
 
 if __name__ == '__main__':
 	app.run(debug=True)
