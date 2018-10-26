@@ -1,9 +1,7 @@
 from flask import Flask, request, Blueprint, make_response, jsonify
 from flask_restplus import Resource, Api
+# from flask_jwt_extended import JWTManager, jwt_required, get_jwt_claims
 from jsonschema import validate
-import jwt
-import datetime
-from functools import wraps
 
 from app.api.v1.models.models import products
 from app.api.v1.utils.validate import schema
@@ -11,26 +9,8 @@ from app.api.v1.utils.validate import schema
 app = Flask(__name__)
 api = Api(app)
 
-app.config['SECRET_KEY'] = 'mysecret@12345'
-
 api_prods = Blueprint('api_prods', __name__)
 api_prod = Blueprint('api_prod', __name__)
-
-def token_required(f):
-	@wraps(f)
-	def decorated(*args, **kwargs):
-		token = request.args.get('token')
-
-		if not token:
-			return jsonify({'message' : 'Token is missing!'})
-		try:
-			data = jwt.decode(token, app.config['SECRET_KEY'])
-		except:
-			return jsonify({'message' : 'Token is invalid'})
-
-		return f(*args, **kwargs)
-
-	return decorated
 
 @api.route('/api/v1/products')
 class Products(Resource):
@@ -39,7 +19,7 @@ class Products(Resource):
 			return {"Products" : products}, 200
 		return {"Message":"There are no products in stock."}
 
-	@token_required
+	# @jwt_required
 	def post(self):
 		req_data = request.get_json()
 		id = len(products) + 1
@@ -56,7 +36,17 @@ class Products(Resource):
 		    "price" : price
 		}
 
+		if quantity <= 0:
+			return jsonify({"Message" : "You can not create product with quantity of zero"})
 		validate(new_product, schema)
+
+		# user_role = get_jwt_claims()
+
+		# admin = "admin"
+
+		# if user_role['role'] != admin:
+		# 	return jsonify({"message": "Only an admin is permitted to post products"}), 401
+
 		products.append(new_product)
 
 		return {"Message" : "Product added successfully", "Products":products}, 200
@@ -64,18 +54,7 @@ class Products(Resource):
 
 @api.route('/api/v1/product/<int:id>')
 class Product(Resource):
+	# @jwt_required
 	def get(self, id):
 		single_product = [product for product in products if product['id'] == id]
 		return {"Product" : single_product}, 200
-	
-
-@api.route('/api/v1/login')
-class Login(Resource):
-	def post(self):
-		auth = request.authorization
-
-		if auth and auth.password == "password":
-			token = jwt.encode({"user" : auth.username, "exp" : datetime.datetime.utcnow() + datetime.timedelta(minutes=30)}, app.config['SECRET_KEY'])
-			return jsonify({"token": token.decode("UTF-8")})
-
-		return make_response('Could not verify', 401, {"WWW-Authenticate" : "Basic realm='Login Required'"})

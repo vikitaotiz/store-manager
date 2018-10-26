@@ -1,8 +1,6 @@
 import unittest
 import json
-# import jwt
 
-# from instance.config import app_config
 from app.api.v1.views.products import Products, Product
 from app import app
 

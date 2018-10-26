@@ -28,7 +28,6 @@ $ python orders.py
 
  | Method         | Endpoint       | Description            |
  |----------------|----------------|------------------------|
- | Post            | api/v1/login      | Prompts for login, use any username but password is "password" |
  | Get            | api/v1/products      | Gets all products      |
  | Get            | api/v1/product/1     | Get single a product   |
  | Post           | api/v1/products      | Adds a product         |
