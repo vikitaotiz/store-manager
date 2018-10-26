@@ -26,14 +26,14 @@ class TestProducts(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
 
     def test_post_products(self):
-        order_data = json.dumps({
+        sale_data = json.dumps({
             "name" : "Woofer",
             "category" : "Electronics",
             "quantity" : 3,
             "price" : 600
         })
 
-        res = self.tests.post('/api/v1/products', data = order_data, content_type="application/json")
+        res = self.tests.post('/api/v1/products', data = sale_data, content_type="application/json")
         self.assertEqual(res.status_code, 200)
         
     def test_get_product(self):

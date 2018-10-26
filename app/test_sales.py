@@ -4,7 +4,7 @@ import json
 from app.api.v1.views.sales import Sales, Sale
 from app import app
 
-class TestOrders(unittest.TestCase):
+class TestSales(unittest.TestCase):
     def setUp(self):
         self.tests = app.test_client()
         self.tests.testing = True
@@ -28,11 +28,11 @@ class TestOrders(unittest.TestCase):
     def tearDown(self):
         self.tests = None
 
-    def test_get_orders(self):
+    def test_get_sales(self):
         result = self.tests.get("/api/v1/sales", content_type="application/json")
         self.assertEqual(result.status_code, 200)
 
-    def test_post_orders(self):
+    def test_post_sales(self):
         sale_data = json.dumps({
             "name" : "Woofer",
             "category" : "Electronics",

@@ -53,7 +53,7 @@ class Sales(Resource):
 		# 	return jsonify({"message": "Only an attendant is permitted to post a sales record"}), 401
 		sales.append(new_sale)
 		
-		return {"Message" : "Order added successfully", "orders":sales}, 200
+		return {"Message" : "Order added successfully", "Sales":sales}, 200
 
 
 @api.route('/api/v1/sale/<int:id>')
