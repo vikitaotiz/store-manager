@@ -38,4 +38,4 @@ class TestProducts(unittest.TestCase):
         
     def test_get_product(self):
         result = self.tests.get("/api/v1/product/1", content_type="application/json")
-        self.assertEqual(result.status_code, 500)
+        self.assertEqual(result.status_code, 200)
